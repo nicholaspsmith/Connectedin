@@ -1,1 +1,15 @@
-show_all.html.erb
+<h1>ConnectedIn</h1>
+<h3>Come and meet some people... and stuff</h3>
+<% @all.each do |person| %>
+  <%= person[:name] %>
+  <br />
+  <%= person[:city] %>
+  <br />
+  <%= person[:description] %>
+  <br />
+
+  <%= link_to image_tag(person[:picture_url], :width => 200), person[:path] %>
+
+  <br />
+  <br />
+<% end %>
